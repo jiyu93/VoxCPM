@@ -4950,6 +4950,11 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
+api = [
+    { name = "fastapi" },
+    { name = "python-multipart" },
+    { name = "uvicorn" },
+]
 dev = [
     { name = "black" },
     { name = "flake8" },
@@ -4965,6 +4970,7 @@ requires-dist = [
     { name = "black", marker = "extra == 'dev'", specifier = ">=21.0" },
     { name = "datasets", specifier = ">=3,<4" },
     { name = "einops" },
+    { name = "fastapi", marker = "extra == 'api'", specifier = ">=0.115.0" },
     { name = "flake8", marker = "extra == 'dev'", specifier = ">=3.8" },
     { name = "funasr" },
     { name = "gradio", specifier = ">=6,<7" },
@@ -4977,6 +4983,7 @@ requires-dist = [
     { name = "pydantic" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=6.0" },
     { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=2.0" },
+    { name = "python-multipart", marker = "extra == 'api'", specifier = ">=0.0.9" },
     { name = "safetensors" },
     { name = "simplejson" },
     { name = "sortedcontainers" },
@@ -4987,9 +4994,10 @@ requires-dist = [
     { name = "torchcodec" },
     { name = "tqdm" },
     { name = "transformers", specifier = ">=4.36.2" },
+    { name = "uvicorn", marker = "extra == 'api'", specifier = ">=0.30.0" },
     { name = "wetext" },
 ]
-provides-extras = ["dev"]
+provides-extras = ["api", "dev"]
 
 [[package]]
 name = "wetext"

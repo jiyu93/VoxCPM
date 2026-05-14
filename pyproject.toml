@@ -52,6 +52,11 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+api = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "python-multipart>=0.0.9",
+]
 dev = [
     "pytest>=6.0",
     "pytest-cov>=2.0",
@@ -62,6 +67,7 @@ dev = [
 
 [project.scripts]
 voxcpm = "voxcpm.cli:main"
+voxcpm-api = "voxcpm.api_server:main"
 
 [project.urls]
 Homepage = "https://github.com/OpenBMB/VoxCPM"
